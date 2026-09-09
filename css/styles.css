@@ -172,6 +172,11 @@ main {
   margin: 0;
 }
 
+.intro--home .intro-media {
+  width: 50%;
+  justify-self: center;
+}
+
 .intro-media img,
 .contact-photo img {
   width: 100%;
@@ -299,12 +304,6 @@ main {
   font-weight: 700;
 }
 
-.program-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.66fr);
-  gap: 30px;
-}
-
 .feature-list {
   margin: 0;
   padding: 0;
@@ -330,23 +329,6 @@ main {
 
 .feature-list li:nth-child(3n) {
   background: var(--sage);
-}
-
-.note-panel {
-  padding: 26px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(225, 233, 202, 0.78);
-}
-
-.note-panel h3 {
-  margin: 0 0 12px;
-  font-size: 1.45rem;
-}
-
-.note-panel p {
-  margin: 0;
-  color: var(--muted);
 }
 
 .benefits-grid {
@@ -449,7 +431,6 @@ main {
 @media (max-width: 900px) {
   .intro,
   .contact-hero,
-  .program-grid,
   .cv-grid {
     grid-template-columns: 1fr;
   }
@@ -502,8 +483,7 @@ main {
 
   .offer-card,
   .benefit-card,
-  .cv-card,
-  .note-panel {
+  .cv-card {
     padding: 20px;
   }
 
