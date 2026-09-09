@@ -1,11 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Animacje Jagódka</title>
+  <meta name="description" content="Animacje Jagódka - twórcze animacje, warsztaty arteterapeutyczne i zajęcia Cyrkowo Rozwojowo dla przedszkoli.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <h1>Witamy na stronie 'animacje jagódka'!</h1>
+  <header class="site-header">
+    <div class="navbar">
+      <a class="brand" href="index.html" aria-label="Strona główna Animacje Jagódka">
+        <span class="brand-name">Animacje Jagódka</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Główna nawigacja">
+        <a class="nav-link active" href="index.html">Start</a>
+        <a class="nav-link" href="#oferta">Oferta</a>
+        <a class="nav-link" href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro intro--home" aria-labelledby="home-title">
+      <div class="intro-copy">
+        <p class="kicker">Animacje, sztuka i ruch</p>
+        <h1 id="home-title" class="page-title">Twórcze spotkania prowadzone z ciepłem, energią i uważnością.</h1>
+        <p class="lead">
+          Animacje Jagódka tworzy przestrzeń dla dzieci i grup, w której sztuka, muzyka, teatr i elementy cyrku pomagają rozwijać odwagę, współpracę i dziecięcą kreatywność.
+        </p>
+      </div>
+
+      <figure class="intro-media">
+        <img src="assets/jagoda-stasienko.jpg" alt="Jagoda Stasieńko podczas animacji na szczudłach">
+      </figure>
+    </section>
+
+    <section class="section owner-section" aria-labelledby="owner-title">
+      <div class="section-heading">
+        <p class="kicker">O prowadzącej</p>
+        <h2 id="owner-title" class="section-title">Jagoda Stasieńko</h2>
+      </div>
+
+      <div class="owner-grid">
+        <p class="owner-copy">
+          Jagoda jest absolwentką arteterapii, czyli terapii poprzez twórczość. Łączy pasję do sztuki z pracą z ludźmi: prowadziła animacje na festynach, pracowała w teatrze objazdowym dla dzieci, w żłobku oraz przy warsztatach arteterapeutycznych dla różnych grup. W swoich zajęciach korzysta z tańca, śpiewu, gry na gitarze, żonglerki, szczudeł, chodzenia po linie i fire show.
+        </p>
+
+        <div class="skill-list" aria-label="Umiejętności Jagody">
+          <span>Taniec</span>
+          <span>Śpiew</span>
+          <span>Gitara</span>
+          <span>Żonglerka</span>
+          <span>Szczudła</span>
+          <span>Chodzenie po linie</span>
+          <span>Fire show</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="oferta" class="section offer-section" aria-labelledby="offer-title">
+      <div class="section-heading">
+        <p class="kicker">Oferta</p>
+      </div>
+
+      <a class="offer-card" href="cyrkowo-rozwojowo.html" aria-label="Przejdź do strony zajęć Cyrkowo Rozwojowo">
+        <span class="offer-card-kicker">Zajęcia dla przedszkoli</span>
+        <span class="offer-card-title">Cyrkowo Rozwojowo</span>
+        <span class="offer-card-copy">Twórcze zajęcia muzyczno-teatralno-cyrkowe dla dzieci w wieku przedszkolnym.</span>
+        <span class="offer-card-action">Zobacz szczegóły</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Animacje Jagódka</span>
+      <a href="mailto:gagastasienko@gmail.com">gagastasienko@gmail.com</a>
+    </div>
+  </footer>
 </body>
 </html>
