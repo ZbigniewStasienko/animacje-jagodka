@@ -33,7 +33,7 @@ body {
   background:
     linear-gradient(180deg, rgba(255, 248, 239, 0.38), rgba(255, 248, 239, 0) 420px),
     var(--bg);
-  font-family: "Courier Prime", "Courier New", monospace;
+  font-family: "Courier New", "Liberation Mono", "Nimbus Mono PS", monospace;
   line-height: 1.65;
 }
 
