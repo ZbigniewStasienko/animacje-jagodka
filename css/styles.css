@@ -115,12 +115,18 @@ main {
   gap: 54px;
 }
 
+.intro--home {
+  align-items: start;
+  gap: 28px;
+}
+
 .intro--offer {
   grid-template-columns: minmax(0, 820px);
 }
 
 .contact-hero {
-  grid-template-columns: minmax(290px, 0.54fr) minmax(0, 1fr);
+  grid-template-columns: minmax(150px, 190px) minmax(0, 1fr);
+  gap: 30px;
 }
 
 .kicker {
@@ -172,9 +178,13 @@ main {
   margin: 0;
 }
 
+.contact-photo {
+  width: min(100%, 190px);
+}
+
 .intro--home .intro-media {
   width: 50%;
-  justify-self: center;
+  justify-self: start;
 }
 
 .intro-media img,
