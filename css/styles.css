@@ -178,17 +178,18 @@ main {
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: var(--shadow);
-  object-fit: cover;
 }
 
 .intro-media img {
-  aspect-ratio: 4 / 5;
-  object-position: 50% 42%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
 }
 
 .contact-photo img {
-  aspect-ratio: 4 / 5;
-  object-position: 50% 39%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
 }
 
 .section {
@@ -461,10 +462,6 @@ main {
     font-size: 2rem;
   }
 
-  .intro-media img,
-  .contact-photo img {
-    max-height: 560px;
-  }
 }
 
 @media (max-width: 680px) {
