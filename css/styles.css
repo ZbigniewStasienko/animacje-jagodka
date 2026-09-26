@@ -227,8 +227,8 @@ a {
     pointer-events: none
 }
 
-.home-circles-left {
-    left: 0;
+.home-circles-lower {
+    right: 0;
     top: 48%;
     width: 102px
 }
@@ -575,9 +575,9 @@ a {
         opacity: .72
     }
 
-    .home-circles-left {
+    .home-circles-lower {
         top: 43%;
-        left: -25px;
+        right: -25px;
         width: 82px
     }
 
