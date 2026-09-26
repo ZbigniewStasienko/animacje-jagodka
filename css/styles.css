@@ -558,44 +558,14 @@ a {
     vertical-align: -6px
 }
 
-.flowers {
+.contact-flower {
     position: absolute;
-    right: 8%;
-    bottom: 13%;
-    width: 160px;
-    height: 135px;
-    border-bottom: 13px solid #73bf10;
-    transform: rotate(8deg)
-}
-
-.flowers i {
-    position: absolute;
-    bottom: 0;
-    left: 45px;
-    width: 11px;
-    height: 90px;
-    background: #71c20a;
-    transform: rotate(-16deg)
-}
-
-.flowers i:before {
-    content: "✿";
-    position: absolute;
-    top: -40px;
-    left: -28px;
-    color: #c64d59;
-    font: 400 68px/1 "Josefin Sans", sans-serif
-}
-
-.flowers i:last-child {
-    left: 104px;
-    height: 68px;
-    transform: rotate(14deg)
-}
-
-.flowers i:last-child:before {
-    color: #d65ecf;
-    font-size: 50px
+    right: 5%;
+    bottom: 5%;
+    width: clamp(240px, 32vw, 467px);
+    height: auto;
+    mix-blend-mode: multiply;
+    pointer-events: none
 }
 
 @media (max-width: 700px) {
@@ -828,10 +798,10 @@ a {
         font-size: 18px
     }
 
-    .flowers {
-        opacity: .75;
-        right: 4%;
-        bottom: 10%
+    .contact-flower {
+        right: -20px;
+        bottom: 2%;
+        width: 210px
     }
 }
 
