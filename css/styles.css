@@ -100,6 +100,30 @@ a {
     display: none
 }
 
+.home-page .nav-links {
+    gap: clamp(8px, 2vw, 28px);
+    padding-top: 10px
+}
+
+.home-page .nav-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 115px;
+    padding-bottom: 12px;
+    background-color: var(--green);
+    background-image: url('../assets/cloud-header.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply
+}
+
+.home-page .nav-links a:last-child {
+    background-image: url('../assets/sun-header.png')
+}
+
 .nav-links a[aria-current=page] {
     color: #fff59b
 }
@@ -114,7 +138,7 @@ a {
 .home-copy {
     position: relative;
     z-index: 2;
-    width: min(760px, 100% - 260px);
+    width: min(1100px, calc(100% - 34px));
     margin: 0 auto;
     text-align: center
 }
@@ -201,18 +225,6 @@ a {
     height: auto;
     mix-blend-mode: multiply;
     pointer-events: none
-}
-
-.home-cloud {
-    top: 8px;
-    right: 24%;
-    width: 201px
-}
-
-.home-sun {
-    top: -18px;
-    right: -18px;
-    width: 176px
 }
 
 .home-circles-left {
@@ -529,6 +541,18 @@ a {
         display: none
     }
 
+    .home-page .nav-links {
+        gap: 2px;
+        padding-top: 0
+    }
+
+    .home-page .nav-links a {
+        width: 76px;
+        height: 58px;
+        padding: 0 0 5px;
+        background-size: contain
+    }
+
     .home-hero {
         min-height: 100vh;
         padding-top: 170px
@@ -549,18 +573,6 @@ a {
     .tree {
         width: 55%;
         opacity: .72
-    }
-
-    .home-cloud {
-        top: 74px;
-        right: 22%;
-        width: 130px
-    }
-
-    .home-sun {
-        top: 68px;
-        right: -28px;
-        width: 120px
     }
 
     .home-circles-left {
@@ -626,6 +638,11 @@ a {
 
     .nav-links a {
         font-size: 14px
+    }
+
+    .home-page .nav-links a {
+        width: 68px;
+        height: 54px
     }
 
     .about-layout {
