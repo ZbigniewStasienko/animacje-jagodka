@@ -230,18 +230,36 @@ a {
 }
 
 .about-layout {
+    position: relative;
     min-height: 100vh;
     display: grid;
     grid-template-columns:41% 59%;
-    background: var(--page-background)
+    background: var(--page-background);
+    overflow: hidden
 }
 
 .about-photo {
+    position: relative;
+    z-index: 1;
     min-height: 100vh;
-    background: url('../assets/jagoda-stasienko.jpg') center/cover no-repeat
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%
+}
+
+.about-photo img {
+    display: block;
+    max-width: 67.5%;
+    max-height: 67.5vh;
+    width: auto;
+    height: auto;
+    object-fit: contain
 }
 
 .about-copy {
+    position: relative;
+    z-index: 3;
     min-height: 100vh;
     padding: 55px max(38px, 8vw) 45px;
     display: flex;
@@ -250,6 +268,39 @@ a {
     justify-content: center;
     text-align: center;
     color: var(--ink)
+}
+
+.about-decoration {
+    position: absolute;
+    z-index: 2;
+    width: clamp(150px, 20vw, 279px);
+    height: auto;
+    mix-blend-mode: multiply;
+    pointer-events: none
+}
+
+.about-decoration-top-left {
+    top: -105px;
+    left: -105px;
+    transform: rotate(-22deg)
+}
+
+.about-decoration-top-right {
+    top: -115px;
+    right: -80px;
+    transform: rotate(53deg) scale(.85)
+}
+
+.about-decoration-bottom-left {
+    bottom: -110px;
+    left: -75px;
+    transform: rotate(118deg) scale(.9)
+}
+
+.about-decoration-bottom-right {
+    right: -115px;
+    bottom: -90px;
+    transform: rotate(-67deg)
 }
 
 .about-copy h1, .contact-content h1 {
@@ -643,6 +694,11 @@ a {
         min-height: calc(100vh - 81px)
     }
 
+    .about-photo img {
+        max-width: 66%;
+        max-height: calc(67.5vh - 61px)
+    }
+
     .about-copy {
         padding: 30px 18px
     }
@@ -723,7 +779,16 @@ a {
 
     .about-photo {
         min-height: 74vh;
-        background-position: center
+        padding: 24px
+    }
+
+    .about-photo img {
+        max-width: 61.5%;
+        max-height: 51vh
+    }
+
+    .about-decoration {
+        width: 165px
     }
 
     .about-copy {
