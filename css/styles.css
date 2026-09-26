@@ -5,7 +5,8 @@
     --cream: #fff2c2;
     --purple: #7d0fc8;
     --blue: #167ebd;
-    --ink: #5b351d
+    --ink: #5b351d;
+    --page-background: #f7f4ef
 }
 
 * {
@@ -17,10 +18,12 @@ html {
 }
 
 body {
+    --header-background: var(--page-background);
     margin: 0;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
     color: #fff;
-    background: var(--green)
+    background: var(--page-background)
 }
 
 a {
@@ -32,7 +35,7 @@ a {
     position: relative;
     z-index: 5;
     height: 150px;
-    background: var(--green);
+    background: var(--page-background);
     pointer-events: none
 }
 
@@ -67,52 +70,25 @@ a {
 
 .nav-links {
     display: flex;
-    gap: clamp(34px, 7vw, 92px);
-    padding-top: 48px
+    gap: clamp(8px, 2vw, 28px);
+    padding-top: 10px
 }
 
 .nav-links a {
     position: relative;
     z-index: 0;
-    color: #fff;
-    font-size: 31px;
-    font-weight: 700;
-    line-height: 1;
-    text-shadow: -2px -2px 0 var(--purple), 2px -2px 0 var(--purple), -2px 2px 0 var(--purple), 2px 2px 0 var(--purple)
-}
-
-.nav-links a:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    inset: -17px -27px;
-    background: #addddd;
-    opacity: .85;
-    border-radius: 44% 56% 48% 52%
-}
-
-.nav-links a:last-child:before {
-    background: #fff02e;
-    border-radius: 50%
-}
-
-.home-page .nav-links a:before {
-    display: none
-}
-
-.home-page .nav-links {
-    gap: clamp(8px, 2vw, 28px);
-    padding-top: 10px
-}
-
-.home-page .nav-links a {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 170px;
     height: 115px;
     padding-bottom: 12px;
-    background-color: var(--green);
+    color: #fff;
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 1;
+    text-shadow: -2px -2px 0 var(--purple), 2px -2px 0 var(--purple), -2px 2px 0 var(--purple), 2px 2px 0 var(--purple);
+    background-color: var(--header-background);
     background-image: url('../assets/cloud-header.png');
     background-position: center;
     background-size: contain;
@@ -120,7 +96,15 @@ a {
     background-blend-mode: multiply
 }
 
-.home-page .nav-links a:last-child {
+.nav-links a:before {
+    display: none
+}
+
+.nav-links a:last-child:before {
+    display: none
+}
+
+.nav-links a:last-child {
     background-image: url('../assets/sun-header.png')
 }
 
@@ -148,7 +132,7 @@ a {
     color: var(--cream);
     font-size: clamp(32px, 4.3vw, 58px);
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 400;
     text-shadow: 3px 3px #8a6844
 }
 
@@ -173,7 +157,7 @@ a {
     list-style: none;
     font-size: clamp(23px, 3vw, 38px);
     line-height: 1.1;
-    font-weight: 700
+    font-weight: 400
 }
 
 .home-skills li {
@@ -205,7 +189,7 @@ a {
     margin: 65px 0 30px;
     color: var(--cream);
     font-size: clamp(21px, 2.7vw, 34px);
-    font-weight: 700;
+    font-weight: 400;
     text-shadow: 2px 2px #98704d
 }
 
@@ -249,7 +233,7 @@ a {
     min-height: 100vh;
     display: grid;
     grid-template-columns:41% 59%;
-    background: var(--red)
+    background: var(--page-background)
 }
 
 .about-photo {
@@ -264,7 +248,8 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center
+    text-align: center;
+    color: var(--ink)
 }
 
 .about-copy h1, .contact-content h1 {
@@ -278,7 +263,7 @@ a {
     max-width: 590px;
     margin: 0;
     font-size: clamp(18px, 2vw, 27px);
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.47
 }
 
@@ -309,7 +294,8 @@ a {
 }
 
 .offer-page, .contact-page {
-    background: var(--orange)
+    --header-background: var(--page-background);
+    background: var(--page-background)
 }
 
 .offer-content {
@@ -317,6 +303,7 @@ a {
     min-height: 100vh;
     margin: auto;
     padding: 42px 13px 30px;
+    color: var(--ink);
     text-align: center
 }
 
@@ -351,14 +338,14 @@ a {
 .offer-details p {
     margin: 0;
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.45
 }
 
 .benefits {
     margin: 35px -13px -30px;
     padding: 1px 13px 20px;
-    background: rgba(255, 190, 85, .75)
+    background: transparent
 }
 
 .benefits > h3 {
@@ -377,7 +364,7 @@ a {
     margin: 0 auto 26px;
     max-width: 640px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.45
 }
 
@@ -429,7 +416,7 @@ a {
     margin: 8px 20px 0;
     color: #79512d;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 400;
     text-align: center
 }
 
@@ -448,7 +435,7 @@ a {
 .contact-content address {
     display: grid;
     gap: 25px;
-    font: normal 700 clamp(20px, 3vw, 31px)/1.2 Arial, sans-serif;
+    font: normal 400 clamp(20px, 3vw, 31px)/1.2 "Josefin Sans", sans-serif;
     color: #111
 }
 
@@ -460,7 +447,7 @@ a {
 
 .contact-content address span {
     color: #fff;
-    font: 44px/.5 "Comic Sans MS", cursive;
+    font: 400 44px/.5 "Josefin Sans", sans-serif;
     text-shadow: 1px 1px #4ebadb;
     vertical-align: -6px
 }
@@ -491,7 +478,7 @@ a {
     top: -40px;
     left: -28px;
     color: #c64d59;
-    font: 68px/1 sans-serif
+    font: 400 68px/1 "Josefin Sans", sans-serif
 }
 
 .flowers i:last-child {
@@ -509,7 +496,7 @@ a {
     .site-header {
         position: relative;
         height: 81px;
-        background: rgba(76, 177, 126, .95)
+        background: var(--page-background)
     }
 
     .home-page .site-header {
@@ -541,12 +528,12 @@ a {
         display: none
     }
 
-    .home-page .nav-links {
+    .nav-links {
         gap: 2px;
         padding-top: 0
     }
 
-    .home-page .nav-links a {
+    .nav-links a {
         width: 76px;
         height: 58px;
         padding: 0 0 5px;
@@ -640,7 +627,7 @@ a {
         font-size: 14px
     }
 
-    .home-page .nav-links a {
+    .nav-links a {
         width: 68px;
         height: 54px
     }
