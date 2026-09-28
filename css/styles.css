@@ -418,21 +418,22 @@ a {
 .offer-heading p {
     margin: 0;
     color: #8c52a1;
-    font-size: 28px;
-    line-height: .9;
-    font-weight: 400
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.05;
+    text-align: center
 }
 
 .offer-heading p span {
-    font-size: 22px
+    font-size: inherit
 }
 
 .offer-heading h1 {
     margin: 38px 0 30px;
     color: #8c52a1;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 400;
-    letter-spacing: 2px
+    text-align: left
 }
 
 .offer-details h2 {
@@ -705,7 +706,10 @@ a {
         font-size: 17px
     }
 
-    .offer-heading h1,
+    .offer-heading h1 {
+        font-size: 28px
+    }
+
     .about-copy h1 {
         font-size: 29px
     }
