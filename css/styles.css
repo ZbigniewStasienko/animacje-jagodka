@@ -459,22 +459,27 @@ a {
 }
 
 .contact-content h1 {
-    width: max-content;
+    width: 100%;
     margin: 0 0 48px;
-    font-size: 54px
+    color: #8c52a1;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.05;
+    text-align: left;
+    text-shadow: none
 }
 
 .contact-content address {
     display: grid;
     gap: 25px;
-    font: normal 400 clamp(20px, 3vw, 31px)/1.2 "Josefin Sans", sans-serif;
-    color: #111
+    font: normal 400 clamp(18px, 2vw, 27px)/1.47 "Josefin Sans", sans-serif;
+    color: var(--ink)
 }
 
 .contact-content address a {
     width: max-content;
     max-width: 75%;
-    text-shadow: 1px 1px #fff
+    text-shadow: none
 }
 
 .contact-content address span {
@@ -602,7 +607,8 @@ a {
         margin-bottom: 18px
     }
 
-    .about-copy p {
+    .about-copy p,
+    .contact-content address {
         font-size: clamp(13px, 3.2vw, 20px)
     }
 
@@ -702,7 +708,8 @@ a {
     }
 
     .about-copy p,
-    .offer-details p {
+    .offer-details p,
+    .contact-content address {
         font-size: 17px
     }
 
@@ -723,11 +730,7 @@ a {
     }
 
     .contact-content h1 {
-        font-size: 43px
-    }
-
-    .contact-content address {
-        font-size: 18px
+        font-size: 36px
     }
 
     .contact-flower {
