@@ -302,6 +302,14 @@ a {
     text-shadow: -2px -2px 0 #173f8e, 2px -2px 0 #173f8e, -2px 2px 0 #173f8e, 2px 2px 0 #173f8e
 }
 
+.about-copy h1 {
+    color: #8c52a1;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-shadow: none
+}
+
 .about-copy p {
     max-width: 590px;
     margin: 0;
@@ -417,17 +425,17 @@ a {
 
 .offer-heading h1 {
     margin: 38px 0 30px;
-    color: #f78a90;
+    color: #8c52a1;
     font-size: 36px;
     font-weight: 400;
-    letter-spacing: 2px;
-    -webkit-text-stroke: 1.5px var(--purple)
+    letter-spacing: 2px
 }
 
-.offer-details h2, .benefits > h2 {
+.offer-details h2 {
     margin: 23px 0 2px;
-    color: var(--purple);
-    font-size: 35px;
+    color: #8c52a1;
+    font-size: 28px;
+    font-weight: 400;
     text-align: left
 }
 
@@ -437,104 +445,6 @@ a {
     font-size: clamp(18px, 2vw, 27px);
     font-weight: 400;
     line-height: 1.47
-}
-
-.benefits {
-    position: relative;
-    margin: 35px -13px -30px;
-    padding: 1px 13px 20px;
-    background: transparent
-}
-
-.benefits > :not(.benefits-brain) {
-    position: relative;
-    z-index: 1
-}
-
-.benefits-brain {
-    position: absolute;
-    z-index: 0;
-    top: -65px;
-    right: -70px;
-    width: 390px;
-    height: auto;
-    opacity: .45;
-    transform: rotate(-8deg);
-    pointer-events: none
-}
-
-.benefits > h3 {
-    margin: 7px 0 17px;
-    color: #2678dc;
-    font-size: 35px;
-    text-align: left;
-    -webkit-text-stroke: 1px var(--purple)
-}
-
-.benefits > h3 span {
-    color: #ff6689
-}
-
-.benefits > p {
-    margin: 0 auto 26px;
-    max-width: 640px;
-    color: var(--ink);
-    font-size: clamp(18px, 2vw, 27px);
-    font-weight: 400;
-    line-height: 1.47
-}
-
-.benefits ol {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    counter-reset: points;
-    text-align: left
-}
-
-.benefits li {
-    counter-increment: points;
-    margin: 0 0 18px
-}
-
-.benefits h4 {
-    display: inline-block;
-    margin: 0;
-    padding: 1px 5px;
-    border-radius: 4px;
-    background: #e756a5;
-    color: #fff;
-    font-size: 26px;
-    line-height: 1.2
-}
-
-.benefits h4:before {
-    content: counter(points) ". "
-}
-
-.benefits li:nth-child(2) h4 {
-    background: #7852ef
-}
-
-.benefits li:nth-child(3) h4 {
-    background: #4f77f2
-}
-
-.benefits li:nth-child(4) h4 {
-    background: #e76e89
-}
-
-.benefits li:nth-child(5) h4 {
-    background: #2bb6cc
-}
-
-.benefits li p {
-    margin: 8px 20px 0;
-    color: var(--ink);
-    font-size: clamp(18px, 2vw, 27px);
-    font-weight: 400;
-    line-height: 1.47;
-    text-align: center
 }
 
 .contact-content {
@@ -725,13 +635,6 @@ a {
         width: 85px
     }
 
-    .benefits-brain {
-        top: -35px;
-        right: -105px;
-        width: 245px;
-        opacity: .35
-    }
-
     .contact-content {
         min-height: calc(100vh - 81px);
         padding-top: 55px
@@ -784,22 +687,17 @@ a {
     }
 
     .about-copy p,
-    .offer-details p,
-    .benefits > p,
-    .benefits li p {
+    .offer-details p {
         font-size: 17px
     }
 
-    .offer-heading h1 {
+    .offer-heading h1,
+    .about-copy h1 {
         font-size: 29px
     }
 
-    .offer-details h2, .benefits > h2 {
-        font-size: 29px
-    }
-
-    .benefits > h3 {
-        font-size: 27px
+    .offer-details h2 {
+        font-size: 28px
     }
 
     .contact-content {
