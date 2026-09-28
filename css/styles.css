@@ -222,13 +222,17 @@ a {
     width: min(22vw, 259px)
 }
 
+.about-page {
+    overflow-x: hidden
+}
+
 .about-layout {
     position: relative;
     min-height: 100vh;
     display: grid;
     grid-template-columns:41% 59%;
     background: var(--page-background);
-    overflow: hidden
+    overflow: visible
 }
 
 .about-photo {
@@ -272,13 +276,13 @@ a {
 }
 
 .about-decoration-top-left {
-    top: -105px;
+    top: -255px;
     left: -105px;
     transform: rotate(-22deg)
 }
 
 .about-decoration-top-right {
-    top: -115px;
+    top: -265px;
     right: -80px;
     transform: rotate(53deg) scale(.85)
 }
@@ -599,6 +603,14 @@ a {
 
     .about-copy p {
         font-size: clamp(13px, 3.2vw, 20px)
+    }
+
+    .about-decoration-top-left {
+        top: -186px
+    }
+
+    .about-decoration-top-right {
+        top: -196px
     }
 
     .offer-content {
