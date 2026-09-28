@@ -126,11 +126,10 @@ a {
 
 .home-eyebrow {
     margin: 34px 0 4px;
-    color: var(--cream);
+    color: #8c52a1;
     font-size: clamp(32px, 4.3vw, 58px);
     line-height: 1.2;
-    font-weight: 400;
-    text-shadow: 3px 3px #8a6844
+    font-weight: 400
 }
 
 .home-copy h1 {
@@ -179,15 +178,14 @@ a {
 }
 
 .home-skills li:nth-child(6) {
-    color: #fff0b3
+    color: #45b8df
 }
 
 .home-more {
     margin: 65px 0 30px;
-    color: var(--cream);
+    color: #8c52a1;
     font-size: clamp(21px, 2.7vw, 34px);
-    font-weight: 400;
-    text-shadow: 2px 2px #98704d
+    font-weight: 400
 }
 
 .tree {
@@ -348,7 +346,7 @@ a {
 
 .offer-content {
     position: relative;
-    max-width: 700px;
+    max-width: 1050px;
     min-height: 100vh;
     margin: auto;
     padding: 42px 13px 30px;
@@ -370,13 +368,13 @@ a {
 
 .offer-circles-small {
     top: 12%;
-    left: -190px;
+    left: -15px;
     width: 122px
 }
 
 .offer-circles-large {
     top: 31%;
-    right: -310px;
+    right: -135px;
     width: 279px
 }
 
@@ -386,20 +384,20 @@ a {
 
 .offer-circle-accent-top {
     top: 6%;
-    right: -150px;
+    right: 25px;
     width: 110px;
     transform: rotate(-9deg)
 }
 
 .offer-circle-accent-middle {
     top: 48%;
-    left: -175px;
+    left: 0;
     width: 140px;
     transform: rotate(8deg) scaleX(-1)
 }
 
 .offer-circle-accent-bottom {
-    right: -145px;
+    right: 30px;
     bottom: 5%;
     width: 95px;
     transform: rotate(5deg)
@@ -407,10 +405,10 @@ a {
 
 .offer-heading p {
     margin: 0;
-    color: #fff;
+    color: #8c52a1;
     font-size: 28px;
     line-height: .9;
-    text-shadow: -1.5px -1.5px var(--purple), 1.5px 1.5px var(--purple)
+    font-weight: 400
 }
 
 .offer-heading p span {
@@ -429,15 +427,16 @@ a {
 .offer-details h2, .benefits > h2 {
     margin: 23px 0 2px;
     color: var(--purple);
-    font-size: 23px;
+    font-size: 35px;
     text-align: left
 }
 
 .offer-details p {
     margin: 0;
-    font-size: 17px;
+    color: var(--ink);
+    font-size: clamp(18px, 2vw, 27px);
     font-weight: 400;
-    line-height: 1.45
+    line-height: 1.47
 }
 
 .benefits {
@@ -456,7 +455,7 @@ a {
     position: absolute;
     z-index: 0;
     top: -65px;
-    right: -245px;
+    right: -70px;
     width: 390px;
     height: auto;
     opacity: .45;
@@ -479,9 +478,10 @@ a {
 .benefits > p {
     margin: 0 auto 26px;
     max-width: 640px;
-    font-size: 16px;
+    color: var(--ink);
+    font-size: clamp(18px, 2vw, 27px);
     font-weight: 400;
-    line-height: 1.45
+    line-height: 1.47
 }
 
 .benefits ol {
@@ -504,7 +504,7 @@ a {
     border-radius: 4px;
     background: #e756a5;
     color: #fff;
-    font-size: 17px;
+    font-size: 26px;
     line-height: 1.2
 }
 
@@ -530,9 +530,10 @@ a {
 
 .benefits li p {
     margin: 8px 20px 0;
-    color: #79512d;
-    font-size: 14px;
+    color: var(--ink);
+    font-size: clamp(18px, 2vw, 27px);
     font-weight: 400;
+    line-height: 1.47;
     text-align: center
 }
 
@@ -782,7 +783,10 @@ a {
         padding: 40px 24px 50px
     }
 
-    .about-copy p {
+    .about-copy p,
+    .offer-details p,
+    .benefits > p,
+    .benefits li p {
         font-size: 17px
     }
 
@@ -791,11 +795,7 @@ a {
     }
 
     .offer-details h2, .benefits > h2 {
-        font-size: 19px
-    }
-
-    .offer-details p {
-        font-size: 14px
+        font-size: 29px
     }
 
     .benefits > h3 {
@@ -821,8 +821,28 @@ a {
     }
 }
 
-/* Header inherits the visual background of the current page. */
+/* Keep the navigation visible while preserving the page underneath it. */
 .site-header,
 .home-page .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     background: transparent;
+}
+
+/* The home header already overlays the hero, so it must not take up space. */
+.home-page .site-header {
+    position: fixed;
+    right: 0;
+    left: 0;
+}
+
+.site-header .nav-links a,
+.site-header .nav-links a[aria-current=page] {
+    color: #3a1945;
+    text-shadow: none;
+}
+
+.site-header .nav-links a:last-child {
+    background-size: auto 72%;
 }
