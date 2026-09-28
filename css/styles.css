@@ -237,7 +237,7 @@ a {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     padding: 5%
 }
 
@@ -254,10 +254,10 @@ a {
     position: relative;
     z-index: 3;
     min-height: 100vh;
-    padding: 55px max(38px, 8vw) 45px;
+    padding: 55px max(38px, 8vw) 45px clamp(10px, 1.5vw, 20px);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     text-align: center;
     color: var(--ink)
@@ -669,7 +669,8 @@ a {
 
     .about-photo {
         min-height: 74vh;
-        padding: 24px
+        padding: 24px;
+        justify-content: center
     }
 
     .about-photo img {
@@ -683,7 +684,8 @@ a {
 
     .about-copy {
         min-height: auto;
-        padding: 40px 24px 50px
+        padding: 40px 24px 50px;
+        align-items: center
     }
 
     .about-copy p,
